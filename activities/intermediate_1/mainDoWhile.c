@@ -81,15 +81,7 @@ int main(int argc, char *argv[]) {
 		}
 		putchar('\n');
 	} while (subs!='q' && subs!='Q');
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	system("PAUSE");
 	return 0;
 }
