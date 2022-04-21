@@ -46,10 +46,11 @@ int main(int argc, char *argv[]) {
 	int steps, stair,width;
 	
 	printf("\nHow many steps will have the stair? ");
-	scanf("%d \n\n", &steps);
+	scanf(" %d", &steps);
+	putchar('\n');
 	
 	for(stair=1; stair<=steps; stair++){
-		printf("%d", stair);	
+			
 		for(width =1; width<=stair; width++)
 			printf("#");
 		putchar('\n');
