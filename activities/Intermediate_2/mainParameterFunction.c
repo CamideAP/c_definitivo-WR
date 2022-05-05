@@ -9,15 +9,33 @@
 #include <stdlib.h>
 
 void specialChar(int a);
-
+void freq_555(float Ra,float Rb, float C);
 
 int main() {
 	int GFUser = 1;
 	
 	while (GFUser>0 && GFUser<10){
-		printf("Type number from 1 to 9 or any other number to quit: ");
+		printf("Type a number from 1 to 9 or any other number to quit: ");
 		scanf("%d",&GFUser);
 		specialChar(GFUser);
+	}
+	int sw =1;
+	float a,b,c;
+	
+	while(sw){
+		printf("Type Ra value: ");
+		scanf("%f", &a);
+		printf("Type Rb value: ");
+		scanf("%f", &b);
+		printf("Type C value: ");
+		scanf("%f", &c);	
+		freq_555(a,b,c);
+		printf("Type 1 to continue and Zero to quit: ");
+		scanf("%d", &sw);
+		if (sw){
+			system("CLS");
+		}
+		
 	}
 	
 	return 0;
@@ -52,4 +70,11 @@ void specialChar(int a){
 	for(i = 0; i<54;i++) putchar(b);
 	printf("\n\n");
 		 
+}
+
+void freq_555(float Ra,float Rb, float C){
+	float freq;
+	
+	freq = 1,44 /((Ra+Rb)*C);
+	printf("\nThe 555 frequency is %.2fHz\n\n", freq);
 }
